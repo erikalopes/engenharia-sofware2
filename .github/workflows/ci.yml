@@ -10,6 +10,16 @@ jobs:
     steps:
       - name: show projects
         run: ls -la
+
       - name: checkout project
         uses: actions/checkout@v2
+        with:
+          node-version: '12'
 
+      - name: resolve dependencies
+        run: npm ci
+
+      - name: running tests
+        run: npm test -- --coverage
+        env:
+          CI: true
