@@ -1,4 +1,4 @@
-![CI](https://github.com/erikalopes/engenharia-sofware2/workflows/CI/badge.svg?branch=master)
+![CI](https://github.com/erikalopes/engenharia-sofware2/workflows/CI/badge.svg?branch=main)
 
 # Projeto Github Actions
 
