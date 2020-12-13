@@ -28,3 +28,18 @@ jobs:
         env:
           CI: true
 
+      - name: upload build
+        if: github.event_name == 'push'
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: build
+
+      - name: deploy to staging
+        if: github.event_name == 'push'
+        run: npx surge --project ./build --domain ci2020-samuelclerod.surge.sh
+        env:
+          SURGE_LOGIN: ${{secrets.SURGE_LOGIN}}
+          SURGE_TOKEN: ${{secrets.SURGE_TOKEN}}
+      
+
