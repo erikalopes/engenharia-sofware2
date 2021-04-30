@@ -2,8 +2,6 @@
 
 # Projeto Github Actions
 
-Esse projeto tem o objetivo de ensinar Continous Integration para a turma de Engenharia de Software II da Unijuazeiro.
-
 ## Tarefas a serem implementas no CI
 
 - [x] fazer o checkout do projeto no CI
